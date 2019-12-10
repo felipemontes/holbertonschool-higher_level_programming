@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def islower(c):
     b = ord(c)
     for i in range(97, 123):
