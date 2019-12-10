@@ -12,4 +12,3 @@ def uppercase(str):
         elif char == 32:
             res += chr(char)
     print("{}".format(res))
-    return res
