@@ -7,8 +7,6 @@ def uppercase(str):
             res += chr(char - 32)
         elif char >= 65 and char <= 90:
             res += chr(char)
-        elif char >= 48 and char <= 67:
-            res += chr(char)
-        elif char == 32:
+        else:
             res += chr(char)
     print("{}".format(res))
