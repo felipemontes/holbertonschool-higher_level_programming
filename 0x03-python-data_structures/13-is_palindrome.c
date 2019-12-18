@@ -12,7 +12,7 @@ int is_palindrome(listint_t **head)
 	int i = 0;
 	int ct;
 
-	if (*head == NULL)
+	if (!head && !*head)
 		return (1);
 	while (node1 != NULL)
 	{
@@ -22,6 +22,7 @@ int is_palindrome(listint_t **head)
 	while (i--)
 	{
 		ct = 0;
+		last_node = *head;
 		while (last_node != NULL)
 		{
 			if (ct == i)
