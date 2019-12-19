@@ -2,18 +2,18 @@
 def roman_to_int(roman_string):
     if not roman_string or not isinstance(roman_string, str):
         return 0
-    values = {'M': 1000, 'D': 500, 'C': 100, 'L': 50, 'X': 10, 'V': 5, 'I': 1}
+    roman_num = {'M': 1000, 'D': 500, 'C': 100, 'L': 50, 'X': 10, 'V': 5, 'I': 1}
     numbers = []
     for char in roman_string:
-        numbers.append(values[char])
+        numbers.append(roman_num[char])
     if len(roman_string) == 1:
         return numbers[0]
-    total = 0
-    num1 = 0
-    num2 = 0
-    for num1, num2 in zip(numbers, numbers[1:]):
-        if num1 >= num2:
-            total += num1
+    res = 0
+    fnum = 0
+    snum = 0
+    for fnum, snum in zip(numbers, numbers[1:]):
+        if fnum >= snum:
+            res += fnum
         else:
-            total -= num1
-    return total + num2
+            res -= fnum
+    return res + snum
