@@ -68,4 +68,4 @@ What you should learn from this project:
 ---
 
 ## Author
-* **Felipe Londono** - [BrianFs04](https://github.com/felipemontes)
+* **Felipe Londono** - [felipemontes](https://github.com/felipemontes)
