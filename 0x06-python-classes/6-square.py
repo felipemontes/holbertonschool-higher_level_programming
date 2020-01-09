@@ -57,7 +57,7 @@ class Square:
     def position(self):
         return self.__position
 
-    @size.setter
+    @position.setter
     def position(self, value):
         if type(value) is not tuple or len(value) != 2:
             raise TypeError(
