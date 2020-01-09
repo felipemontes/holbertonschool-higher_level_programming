@@ -12,6 +12,9 @@ class Square:
         elif size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
+        if position is tuple:
+            raise TypeError(
+                    "position must be a tuple of 2 positive integers")
         for num in position:
             if not isinstance(num, int) or num < 0:
                 raise TypeError(
@@ -45,6 +48,8 @@ class Square:
         if self.__size == 0:
             print("")
         else:
+            for b in range(self.__position[1]):
+                print()
             for i in range(self.__size):
                 print(" " * self.__position[0], end='')
                 print("#" * self.__size)
