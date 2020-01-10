@@ -25,7 +25,7 @@ class Square:
         strr = ''
         if self.__size == 0:
             return strr
-        if self.position[1] < 0:
+        for i in range(self.position[1]):
             strr += '\n'
         for b in range(self.__size):
             strr += self.position[0] * ' '
