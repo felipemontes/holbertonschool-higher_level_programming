@@ -13,7 +13,8 @@ class Node:
     def data(self, value):
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
-        self.__data = value
+        else:
+            self.__data = value
 
     @property
     def next_node(self):
@@ -23,7 +24,8 @@ class Node:
     def next_node(self, value):
         if value is not None and not isinstance(value, Node):
             raise TypeError("next_node must be a Node object")
-        self.__next_node = value
+        else:
+            self.__next_node = value
 
 
 class SinglyLinkedList:
@@ -37,8 +39,8 @@ class SinglyLinkedList:
         while (tmp):
             strr.append(str(tmp.data))
             tmp = tmp.next_node
-        strr = sorted(strr)
-        return '\n'.join(strr)
+        strr.sort(key=int)
+        return ('\n'.join(strr))
 
     def sorted_insert(self, value):
         if self.__head is None:
