@@ -1,0 +1,30 @@
+        ======================================
+        Test for the function text_indentation
+        ======================================
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+	>>> text_indentation('Hello. World')
+	Hello.
+	<BLANKLINE>
+	World
+
+	>>> text_indentation(2452)
+	Traceback (most recent call last):
+            ...
+        TypeError: text must be a string
+
+	>>> text_indentation('Hola: .mundo')
+	Hola:
+	<BLANKLINE>
+	.
+	<BLANKLINE>
+	mundo
+
+	>>> text_indentation('.?:')
+	.
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+	:
+	<BLANKLINE>
