@@ -12,6 +12,11 @@
            ...
 	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
+	>>> matrix_divided([[1, 2], [3, 4]], None)
+	Traceback (most recent call last):
+           ...
+	TypeError: div must be a number
+
 	>>> matrix_divided(None, None)
 	Traceback (most recent call last):
            ...
@@ -44,7 +49,5 @@
            ...
 	TypeError: div must be a number
 
-	>>> matrix_divided([1, 2], [3, 4], float(inf))
-    	Traceback (most recent call last):
-           ...
-        OverflowError: cannot convert float infinity to integer
+	>>> matrix_divided([[1, 2], [3, 4]], float('inf'))
+    	[[0.0, 0.0], [0.0, 0.0]]
