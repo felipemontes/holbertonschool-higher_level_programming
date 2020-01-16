@@ -4,6 +4,9 @@ def matrix_divided(matrix, div):
     size = 0
     if div == 0:
         raise ZeroDivisionError('division by zero')
+    if type(matrix) is not list:
+        raise TypeError('matrix must be a matrix (list of lists) '
+                        'of integers/floats')
     for rows in matrix:
         if not isinstance(rows, list):
             raise TypeError('matrix must be a matrix (list of lists) '
