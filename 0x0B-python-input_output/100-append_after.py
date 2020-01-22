@@ -5,7 +5,7 @@ def append_after(filename="", search_string="", new_string=""):
     with open(filename, 'r+') as f:
         for words in f:
             line += words
-        if search_string in words:
-            line += new_string
+            if search_string in words:
+                line += new_string
     f.seek(0)
     f.write(line)
