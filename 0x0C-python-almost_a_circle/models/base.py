@@ -1,8 +1,10 @@
 #!/usr/bin/python3
+""" base model"""
 import json
 
+
 class Base:
-    """ class base"""
+    """ base for new geometry forms"""
 
     __nb_objects = 0
 
@@ -15,6 +17,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """ returns a json string"""
         if list_dictionaries is None or len(list_dictionaries) is 0:
             return '[]'
         else:
@@ -22,6 +25,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """ saves on a file a json string"""
         fname = "{}.json".format(cls.__name__)
         newdic = []
 
@@ -35,18 +39,21 @@ class Base:
             f.write(lists)
 
     def from_json_string(json_string):
+        """ returns a json string inside a list"""
         if json_string is None and len(json_string) == 0:
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
+        """ creates an instance with the attr"""
         newinsta = cls(1, 1)
         newinsta.update(**dictionary)
         return newinsta
 
     @classmethod
     def load_from_file(cls):
+        """ returns a list of instances """
         fname = '{}.json'.format(cls.__name__)
         try:
             with open(fname, 'r') as f:
