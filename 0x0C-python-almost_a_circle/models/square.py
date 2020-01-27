@@ -10,9 +10,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """ returns a str representation """
-        strr = "[Square] ({}) {}/{} - {}".format(self.id,
-                                                 self.x, self.y,
-                                                 self.width)
+        strr = "[Square] ({:d}) {:d}/{:d} - {:d}"
+        strr = strr.format(self.id, self.x, self.y, self.width)
         return strr
 
     @property
