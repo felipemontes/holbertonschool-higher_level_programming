@@ -47,7 +47,10 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """ creates an instance with the attr"""
-        newinsta = cls(1, 1)
+        if cls.__name__ == "Rectangle":
+            newinsta = cls(1, 1)
+        elif cls.__name__ == "Square":
+            newinsta = cls(1)
         newinsta.update(**dictionary)
         return newinsta
 
