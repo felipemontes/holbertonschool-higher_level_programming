@@ -95,3 +95,21 @@ class TestRectangle(unittest.TestCase):
 
         ar2 = Rectangle(1, 2, 3, 4)
         self.assertEqual(ar2.area(), 2)
+
+    def test_to_dictionary(self):
+        """ testo to check to_dictionary method"""
+        Base._Base__nb_objects = 0
+
+        ins = Rectangle(5, 2)
+        dic1 = {'id': 1, 'width': 5, 'height': 2, 'x': 0, 'y': 0}
+        self.assertDictEqual(ins.to_dictionary(), dic1)
+
+        ins2 = Rectangle(5, 2, 4, 0, 8)
+        dic2 = {'id': 8, 'width': 5, 'height': 2, 'x': 4, 'y': 0}
+        self.assertDictEqual(ins2.to_dictionary(), dic2)
+
+    def test_update(self):
+        """ test to check update method """
+        ins1 = Rectangle(5, 5)
+        ins1.update(7, 2)
+        self.assertEqual(ins1.__str__(), '[Rectangle] (7) 0/0 - 2/5')
