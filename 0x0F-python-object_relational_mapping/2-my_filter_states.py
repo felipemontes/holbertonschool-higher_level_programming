@@ -13,7 +13,8 @@ def mysqlconnect():
                                     db=sys.argv[3], port=3306)
     cursor = db_connection.cursor()
 
-    cursor.execute("SELECT * FROM states WHERE name='{}'".format(sys.argv[4]))
+    cursor.execute("SELECT * FROM states WHERE name LIKE '{}' "
+                   "COLLATE Latin1_General_CS;".format(sys.argv[4]))
     rows = cursor.fetchall()
     for row in rows:
         print(row)
