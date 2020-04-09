@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def findPeakUtil(arr, low, high):
     """ Find peak"""
     if not arr:
