@@ -39,4 +39,4 @@ if __name__ == '__main__':
 
     for i in tweet:
         print("[{}] {} by {}".format(i.get("id"), i.get("text"),
-                                      i.get("user").get("name")))
+                                     i.get("user").get("name")))
