@@ -37,6 +37,6 @@ if __name__ == '__main__':
 
     tweet = req_search.json().get("statuses")
 
-    for i in tweets:
-        print("[{}] {} by {}").format(i.get("id"), i.get("texts"),
-                                      i.get("user").get("name"))
+    for i in tweet:
+        print("[{}] {} by {}".format(i.get("id"), i.get("text"),
+                                      i.get("user").get("name")))
