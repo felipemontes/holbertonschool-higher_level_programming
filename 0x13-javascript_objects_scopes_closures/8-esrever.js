@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/node
 
 exports.esrever = function (list) {
   const nlist = [];
